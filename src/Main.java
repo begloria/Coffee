@@ -50,7 +50,18 @@ public class Main {
         }
         System.out.println("You have ordered: "+c.getIngredients());
         System.out.println("Please give me "+c.getCost()+" coins");
-        
+        int gotin=0;
+        while(gotin<c.getCost()){
+            int coin=sc.nextInt();
+            if(coin!=1 && coin!=2 && coin!=5){
+                System.out.println("Please give me 1,2 or 5");
+            }
+            else{
+                gotin+=coin;
+            }
+        }
+        System.out.println("Your change: "+ (gotin-c.getCost()));
+        System.out.println("Here is your coffee! Have a nice day!");
 
     }
 }
